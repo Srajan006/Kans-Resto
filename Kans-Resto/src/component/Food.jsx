@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./food.css";
 
-
 const products = [
   {
     id: 1,
@@ -58,32 +57,26 @@ const ProductCard = ({ product, showQuantityControls }) => {
 
   return (
     <div className="card">
-       <img src={product.image} alt={product.name} className="item-image" />
+      <img src={product.image} alt={product.name} className="item-image" />
       <div className="content">
-        <p className="available">Available: {product.available}</p>
         <h3 className="name">{product.name}</h3>
         <div className="discount-container">
-        <p className="discount">{product.discount}%</p>
-        <p className="original-price">Rp {product.originalPrice.toLocaleString()}</p>
+          <p className="discount">{product.discount}%</p>
+          <p className="original-price">Rp {product.originalPrice.toLocaleString()}</p>
         </div>
-        <p className="discounted-price">Rp {product.discountedPrice.toLocaleString()}</p>
-        {showQuantityControls && (
-          <div className="quantity-controls">
-            <button className="quantity-btn" onClick={handleDecrease}>
-              -
-            </button>
-            <input
-              type="text"
-              className="quantity-display"
-              value={quantity}
-              readOnly
-            />
-            <button className="quantity-btn" onClick={handleIncrease}>
-              +
-            </button>
+        <div className="price-actions">
+          <p className="discounted-price">Rp {product.discountedPrice.toLocaleString()}</p>
+          <div className="controls">
+            {showQuantityControls && (
+              <div className="quantity-controls">
+                <button className="quantity-btn" onClick={handleDecrease}>-</button>
+                <input type="text" className="quantity-display" value={quantity} readOnly />
+                <button className="quantity-btn" onClick={handleIncrease}>+</button>
+              </div>
+            )}
+            <button className="order-button">Order</button>
           </div>
-        )}
-        <button className="order-button">Order</button>
+        </div>
       </div>
     </div>
   );
@@ -93,7 +86,6 @@ const Food = () => {
   try {
     return (
       <div className="container">
-        <h1 className="title">Kans Resto</h1>
         <h2 className="subtitle">Special Discount Today</h2>
         <div className="grid">
           {products.map((product, index) => (

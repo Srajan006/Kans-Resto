@@ -2,6 +2,7 @@
 .container {
   padding: 20px;
   text-align: center;
+  background-color: #ececec;
 }
 
 .title {
@@ -10,8 +11,9 @@
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 30px;
   margin-top: 10px;
+  text-align: left;
 }
 
 .grid {
@@ -22,6 +24,8 @@
 }
 
 .card {
+  width: 70%;
+  height: 70%;
   background: white;
   border-radius: 10px;
   padding: 15px;
@@ -30,7 +34,7 @@
 }
 
 .image {
-  width: 100%;
+  width: 80%;
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
@@ -48,7 +52,8 @@
 .name {
   font-size: 16px;
   font-weight: bold;
-  margin-left: 0px;
+  margin-bottom: 0px;
+  text-align: left;
 }
 
 /* .discount-container {
@@ -98,6 +103,9 @@
 .discounted-price {
   font-size: 18px;
   font-weight: bold;
+  margin: 0px;
+  text-align: left;
+  width: 120px;
 }
 
 .order-button {
@@ -105,10 +113,11 @@
   color: white;
   border: none;
   padding: 8px 12px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
+  width: 30%;
+  border-radius: 15px;
 }
 
 .order-button:hover {
@@ -150,4 +159,73 @@
   margin: 0 10px;
   font-size: 16px;
   font-weight: bold;
+}
+
+.quantity-display{
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.quantity-btn{
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50px;
+  border-color: 0.3px solid black;
+  background-color: #fff;
+}
+
+.item-image{
+  width: 100%;
+  height: 60%;
+}
+
+.price-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.order-button {
+  width: 70px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background: #333;
+}
+
+.price-actions{
+  width: 200px;
+  margin: 0%;
 }
